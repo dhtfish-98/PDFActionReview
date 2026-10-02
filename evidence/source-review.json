@@ -1,6 +1,6 @@
 {
   "project": "PDFActionReview",
-  "review_date": "2026-10-02",
+  "review_date": "2026-10-03",
   "all_new_runtime_tests_package_ci_docs_notices_reviewed": true,
   "reviewed_files": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "bc1dd81bdedf555ac3b709e39da33a0a5aa469352562a4a846a492e49e64b4e0",
+      "sha256": "e5b8af7e9b70b1cf37d38c0160990d07d0450355927a25b8936853b55c9dfed6",
       "physical_lines": 23,
       "reviewed_complete": true
     },
@@ -29,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "61035960afcb75ab20a5183c44cb2d71b10ac2ae56a46aa4520c96e5d0d98526",
-      "physical_lines": 107,
+      "sha256": "0259f9134c7c4c44d9d259a9a2095fa4d2b3ed0b3efc6655201744a1fc7c6ceb",
+      "physical_lines": 111,
       "reviewed_complete": true
     },
     {
@@ -41,14 +41,14 @@
     },
     {
       "path": "DEFENSIVE_SCOPE.md",
-      "sha256": "925080e603f23d67acf3794b35f6556e41b51d54fd2333377f188ecf81ab00f0",
-      "physical_lines": 26,
+      "sha256": "ad12fa2b387be8af4a70fd09dc4ca4c18222643f14b9e5263537dd4e6368c6af",
+      "physical_lines": 29,
       "reviewed_complete": true
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "93e25e9cfb03f2cb432652981fa6620f201d0b92c9b02263bbe19a69fc32f5d2",
-      "physical_lines": 28,
+      "sha256": "5a4406709cc7657786375eb316f6cc9d4a2afd8e361ef0bc0ac71da5b75fce72",
+      "physical_lines": 36,
       "reviewed_complete": true
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "path": "src/pdf_action_review/__init__.py",
-      "sha256": "d87cac28d68a6ab6f543b23e3177391c2c21c6e0a7136774a0f32fb51ce1ab6c",
+      "sha256": "ffcdc0f8a97ae25664d861710f725356ab0e254bf70464ab2ecab77f44a2dee8",
       "physical_lines": 6,
       "reviewed_complete": true
     },
@@ -77,20 +77,26 @@
     },
     {
       "path": "src/pdf_action_review/cli.py",
-      "sha256": "4f60ae16c57a21f21a4dcd1b74d4f0e1d024c180bd6067f844d02a387f6a0ac9",
-      "physical_lines": 15,
+      "sha256": "03a2819a756a79666f39f647f85c75a37807d14e20167e692918ae6cb4cf135e",
+      "physical_lines": 30,
       "reviewed_complete": true
     },
     {
       "path": "src/pdf_action_review/review.py",
-      "sha256": "8d781fed13dcb5b96abbdef267ea4e02e49b1fff6c11ff051e16499e4b40befe",
-      "physical_lines": 476,
+      "sha256": "0504460b24ad34f01eb56cc38d08696a11c3ee78b9a8b4e472667590f398e71e",
+      "physical_lines": 484,
       "reviewed_complete": true
     },
     {
       "path": "tests/test_review.py",
-      "sha256": "ca04b10fab76b89cc7083a57143cf5fe177852c37f804b54fc2c968fffc87ff3",
-      "physical_lines": 321,
+      "sha256": "d0ac2f4ca3cc647f0876c7587a9392c46bc861be8470274cbeaa41f31260e466",
+      "physical_lines": 359,
+      "reviewed_complete": true
+    },
+    {
+      "path": "evidence/reaudit-0.1.1.json",
+      "sha256": "0cd67cb07ead56f6157bdc942560653981561931cb66ddedd306d55d50dd6553",
+      "physical_lines": 21,
       "reviewed_complete": true
     }
   ],
@@ -109,7 +115,9 @@
   ],
   "findings_resolved": [
     "Wrong-type false/zero library limits now raise TypeError; targeted regression passes",
-    "Parent path-component symlink behavior described accurately"
+    "Parent path-component symlink behavior described accurately",
+    "Current FAIL retained when earlier OPEN observations fill finding capacity",
+    "Private invalid/missing CLI arguments produce fixed OPEN JSON instead of argparse argv echo"
   ],
   "remaining_limits": [
     "No complete PDF conformance/object/xref/revision/action parser",
@@ -119,5 +127,7 @@
     "No suite-wide upstream rewrite or complete dependency implementation audit",
     "Hosted CI and PDF viewer behavior were not executed"
   ],
-  "reviewer": "OpenAI Codex AI-assisted review; independent human contribution and provider acceptance remain OPEN"
+  "reviewer": "OpenAI Codex AI-assisted review; independent human contribution and provider acceptance remain OPEN",
+  "version": "0.1.1",
+  "reaudit_review_basis": "Prior complete selected-source review retained for unchanged files; final runtime and changed source/test/CLI/docs/metadata inspected in this re-audit. Current package/installed/CI states belong to separately bound external records."
 }

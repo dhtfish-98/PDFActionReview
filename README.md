@@ -29,6 +29,10 @@ Exit `0` is PASS within the stated lexical checks; `1` is a demonstrated lexical
 failure such as a mismatched delimiter or malformed hex string; `2` is OPEN for
 unsupported, ambiguous, partial or review-requiring observations. FAIL has priority
 if an OPEN observation also exists. Counts are observations, not action executions.
+Version 0.1.1 preserves a newly observed FAIL even if earlier OPEN findings have
+filled the diagnostic budget; report reduction also keeps that failure. Invalid
+or missing command arguments produce an OPEN JSON report with a fixed diagnostic
+and exit 2, without echoing argument values or paths to stdout or stderr.
 
 Every report keeps `document_safety`, `action_semantics` and
 `xref_object_resolution` equal to **OPEN**, including lexical PASS reports.

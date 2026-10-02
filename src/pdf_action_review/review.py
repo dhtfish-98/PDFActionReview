@@ -69,6 +69,7 @@ class Review:
         self.limits = limits
         self.offset_count = 0
         self.offset_limit_reported = False
+        self.known_failure = None
         self.data = {
             "schema": "pdf-action-review/1", "status": "OPEN",
             "result_scope": "bounded contextual lexical observations only",
@@ -86,14 +87,21 @@ class Review:
         }
 
     def add(self, status: str, code: str, offset: int | None, detail: str, *, incomplete=False):
+        finding = {"status": status, "code": code, "offset": offset, "detail": detail}
+        if status == "FAIL" and self.known_failure is None:
+            self.known_failure = finding
         if incomplete:
             self.data["lexical_complete"] = False
         if len(self.data["findings"]) >= self.limits.findings - 1:
+            if status == "FAIL":
+                # Retain the just-observed contradiction before reserving the
+                # final slot for the coverage gap. Earlier OPEN rows may be omitted.
+                self.data["findings"] = self.data["findings"][:self.limits.findings - 2] + [finding]
             self.data["findings"].append({"status": "OPEN", "code": "finding_limit", "offset": offset,
                                           "detail": "Finding budget reached; remaining input was not reviewed."})
             self.data["lexical_complete"] = False
             raise Stop
-        self.data["findings"].append({"status": status, "code": code, "offset": offset, "detail": detail})
+        self.data["findings"].append(finding)
 
     def stop(self, code: str, offset: int | None, detail: str):
         self.add("OPEN", code, offset, detail, incomplete=True)
@@ -119,9 +127,9 @@ class Review:
 
     def finish(self):
         flags = {f["status"] for f in self.data["findings"]}
-        self.data["status"] = "FAIL" if "FAIL" in flags else ("OPEN" if "OPEN" in flags else "PASS")
+        self.data["status"] = "FAIL" if self.known_failure is not None else ("OPEN" if "OPEN" in flags else "PASS")
         if len(json.dumps(self.data, ensure_ascii=True).encode()) > self.limits.report_bytes:
-            failure = next((f for f in self.data["findings"] if f["status"] == "FAIL"), None)
+            failure = self.known_failure
             self.data["name_counts"] = {}
             self.data["structural_counts"] = {}
             self.data["eof"]["offsets"] = []

@@ -18,6 +18,9 @@ and viewer behavior remain unverified. Every report carries document safety and
 action semantics as OPEN. Watched-name presence is an observation that merits
 review; it is not proof of an action or maliciousness. Unrecognized content or
 partial analysis cannot be called safe.
+An observed lexical failure remains FAIL when diagnostic or report budgets are
+reached. Command argument rejection reports only a fixed OPEN diagnostic; private
+argument spellings and paths are not echoed in either output stream.
 
 This is a lawful defensive artifact-inspection topic. CVP qualification is OPEN:
 applicant identity/organization, attributable work, actual workflow and real

@@ -229,6 +229,24 @@ class PDFReviewTests(unittest.TestCase):
         report = self.expect("report_limit", pdf(b"\n% " + b"/JS " * 500 + b"\n"), limits=replace(Limits(), report_bytes=8192))
         self.assertFalse(report["lexical_complete"])
 
+    def test_current_failure_is_retained_when_prior_open_findings_fill_budget(self):
+        for count in (2, Limits().findings):
+            data = b"%PDF-1.7\n" + b"unknown\n" * (count - 1) + b"]\n%%EOF\n"
+            with self.subTest(findings=count):
+                report = self.expect("container_mismatch", data, status="FAIL",
+                                     limits=replace(Limits(), findings=count))
+                self.assertEqual(len(report["findings"]), count)
+                self.assertIn("finding_limit", [f["code"] for f in report["findings"]])
+                self.assertFalse(report["lexical_complete"])
+                self.assertEqual(report["document_safety"], "OPEN")
+
+    def test_failure_survives_findings_and_report_reduction(self):
+        data = b"%PDF-1.7\n% " + b"/JS " * 1000 + b"\nunknown\n]\n%%EOF\n"
+        report = self.expect("container_mismatch", data, status="FAIL",
+                             limits=replace(Limits(), findings=2, report_bytes=8192))
+        self.assertIn("report_limit", [f["code"] for f in report["findings"]])
+        self.assertFalse(report["lexical_complete"])
+
     def test_local_contract_and_io_errors_hide_paths(self):
         for path in ("https://example.invalid/private.pdf", "@list.txt", "-", self.root, self.root / "private_missing.pdf"):
             report = review_pdf(path)
@@ -270,9 +288,29 @@ class PDFReviewTests(unittest.TestCase):
                 self.assertEqual(main([str(self.path)]), expected)
                 self.assertEqual(json.loads(output.getvalue())["status"], {0:"PASS",1:"FAIL",2:"OPEN"}[expected])
         for option in ("--plugins", "--select", "--disarm", "--output", "--scan", "--recursedir"):
-            with mock.patch("sys.stderr", new_callable=io.StringIO), self.assertRaises(SystemExit) as exc:
-                main([str(self.path), option])
-            self.assertEqual(exc.exception.code, 2)
+            with mock.patch("sys.stderr", new_callable=io.StringIO) as error, \
+                    mock.patch("sys.stdout", new_callable=io.StringIO) as output:
+                self.assertEqual(main([str(self.path), option]), 2)
+                self.assertEqual(error.getvalue(), "")
+                self.assertEqual(json.loads(output.getvalue())["findings"][0]["code"], "invalid_arguments")
+
+    def test_cli_invalid_or_missing_arguments_are_private_open_json(self):
+        private = "PRIVATE_ARGUMENT_MARKER"
+        for arguments in ([], [private, "--unsupported=" + private],
+                          [private, "--plugins", private], ["--unsupported=" + private]):
+            with self.subTest(arguments=arguments), \
+                    mock.patch("sys.stderr", new_callable=io.StringIO) as error, \
+                    mock.patch("sys.stdout", new_callable=io.StringIO) as output:
+                self.assertEqual(main(arguments), 2)
+                self.assertEqual(error.getvalue(), "")
+                self.assertNotIn(private, output.getvalue())
+                report = json.loads(output.getvalue())
+                self.assertEqual(report["status"], "OPEN")
+                self.assertFalse(report["lexical_complete"])
+                self.assertEqual(report["input_sha256"], None)
+                self.assertEqual(report["document_safety"], "OPEN")
+                self.assertEqual(report["action_semantics"], "OPEN")
+                self.assertEqual(report["xref_object_resolution"], "OPEN")
 
     def test_limits_only_tighten(self):
         for limits in (replace(Limits(), tokens=0), replace(Limits(), tokens=True), replace(Limits(), input_bytes=Limits().input_bytes+1)):
