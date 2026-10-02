@@ -1,0 +1,130 @@
+{
+  "project": "PDFActionReview",
+  "date": "2026-10-02",
+  "environment": {
+    "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+    "build_tools": {
+      "build": "1.3.0",
+      "setuptools": "80.9.0",
+      "wheel": "0.45.1",
+      "packaging": "26.3",
+      "pyproject_hooks": "1.3.3"
+    }
+  },
+  "source_tests": {
+    "command": "PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v",
+    "tests": 37,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "result": "PASS",
+    "log": "Local ignored .verification/source-tests.log"
+  },
+  "independent_installed_tests": {
+    "result": "PASS",
+    "tests": 37,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "environment": "Fresh local virtual environment; wheel installed offline with --no-index --no-deps; PYTHONPATH removed; outside source checkout cwd",
+    "command": "consumer/bin/python -m unittest discover -s absolute-tests-path -v",
+    "runtime_import": "verified consumer site-packages; byte-identical to reviewed wheel/source"
+  },
+  "cli_checks": {
+    "result": "PASS",
+    "fixtures": [
+      {
+        "fixture": "plain.pdf",
+        "exit": 0,
+        "status": "PASS",
+        "input_sha256": "7e013a682cd90be208a9f8d48187c2fe159e7fe55950baae135896b8eb065f24",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      },
+      {
+        "fixture": "delimiter.pdf",
+        "exit": 1,
+        "status": "FAIL",
+        "input_sha256": "5b952e47c26670f4617c7aaae1cb2da26fb088824d501f36ea8531a2ace6b6bf",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      },
+      {
+        "fixture": "encoded.pdf",
+        "exit": 2,
+        "status": "OPEN",
+        "input_sha256": "40ba99f27f9250a937ab0ed34c62296d3872961a1b2a6a3e3cb017612d565ae7",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      },
+      {
+        "fixture": "opaque.pdf",
+        "exit": 2,
+        "status": "OPEN",
+        "input_sha256": "6529439bb6f9d591bbfcdcc108ea1bbdc2b9d1db1e3e5ba10dd47a89c4edafde",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      },
+      {
+        "fixture": "zip.pdf",
+        "exit": 2,
+        "status": "OPEN",
+        "input_sha256": "8dcc7e601606217f3b754766511182a916b17e9a26a94c9d887104eba92e9bb2",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      },
+      {
+        "fixture": "truncated.pdf",
+        "exit": 2,
+        "status": "OPEN",
+        "input_sha256": "214196994723b42d2964d178e6915486a689342a98bb1d7ddcd39c45297ee9c3",
+        "unchanged": true,
+        "semantic_safety_states": "OPEN"
+      }
+    ],
+    "additional_checks": [
+      "version/help and Python module entry",
+      "URL/@/stdin/directory/missing inputs OPEN without private paths",
+      "all six removed legacy CLI flags rejected"
+    ],
+    "input_changes": 0,
+    "timeouts": 0,
+    "commands": "Independently installed console CLI and Python module entry; fresh subprocess with PYTHONPATH absent",
+    "all_semantic_states_remain": "OPEN"
+  },
+  "distribution_identity": {
+    "result": "PASS",
+    "built": [
+      "wheel",
+      "sdist"
+    ],
+    "runtime_files": 4,
+    "reviewed_source_files_in_sdist": 15,
+    "new_runtime_bytes_match_reviewed_source_and_installed_package": true,
+    "full_notices": [
+      "LICENSE (MIT)",
+      "licenses/PDFiD-PUBLIC-DOMAIN.txt (selected module only)"
+    ],
+    "provenance_scope_validation_in_both": true,
+    "evidence_json_in_sdist": true,
+    "no_venv_caches_or_verification_in_package": true,
+    "runtime_requires_dist": [],
+    "source_hashes": "evidence/source-review.json",
+    "final_hashes": "External research engineering handoff"
+  },
+  "scope": [
+    "Local CPython/macOS execution only; hosted Python 3.11/3.14 CI unexecuted",
+    "Generated inert raw PDF fixtures only; no viewer execution",
+    "Input unchanged, no extraction/install/import of reviewed PDF",
+    "document_safety, action_semantics and xref_object_resolution remain OPEN even lexical PASS"
+  ],
+  "artifact_hash_location": "External research engineering handoff; package self-hash is not claimed",
+  "limitations": [
+    "PASS is scoped lexical-policy outcome only; document safety/action semantics/xref resolution always OPEN",
+    "No PDF viewer, JavaScript execution, network, decompression, attachments or complete semantic parsing",
+    "Only local CPython 3.14.6 on macOS arm64 executed; hosted CI Python 3.11/3.14 remains unrun",
+    "CVP application eligibility/provider approval and independent applicant human contribution remain OPEN",
+    "Selected upstream pdfid.py all 1089 lines reviewed; rest of DidierStevensSuite and dependency implementations not audited"
+  ]
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-action-review"
+version = "0.1.0"
+description = "Bounded read-only contextual PDF name and structural token review"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "licenses/PDFiD-PUBLIC-DOMAIN.txt"]
+authors = [{name = "PDFActionReview contributors (AI-assisted implementation)"}]
+dependencies = []
+
+[project.scripts]
+pdf-action-review = "pdf_action_review.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/pdf-action-review" = ["ORIGIN.md", "DEFENSIVE_SCOPE.md", "VALIDATION.md"]

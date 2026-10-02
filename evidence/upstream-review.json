@@ -1,0 +1,67 @@
+{
+  "project": "PDFActionReview",
+  "review_date": "2026-10-02",
+  "repository": "https://github.com/DidierStevens/DidierStevensSuite",
+  "commit": "b248e9aabac4dedc2619c986d07eb7a5f4c18d37",
+  "selected_module": "pdfid.py",
+  "module_sha256": "e958a01f1c2596470f27d3c308061b85d7059ff476a58d74f1957a71b4f1248f",
+  "physical_lines": 1089,
+  "reviewed_ranges": [
+    "1-290",
+    "291-565",
+    "566-830",
+    "831-1089"
+  ],
+  "selected_module_fully_reviewed": true,
+  "suite_fully_reviewed": false,
+  "license": {
+    "scope": "selected pdfid.py module only",
+    "declaration_lines": "12-14",
+    "declaration": "Source code put in public domain by Didier Stevens, no Copyright\nhttps://DidierStevens.com\nUse at your own risk",
+    "full_notice_retained": "licenses/PDFiD-PUBLIC-DOMAIN.txt"
+  },
+  "reviewed_entry_points": [
+    "imports and cBinaryFile",
+    "cPDFiD data/results and PDFiD byte loop",
+    "EOF/entropy/date/XML/JSON helpers",
+    "UpdateWords and disarm branch",
+    "ProcessFile and select eval",
+    "file-list/glob/Scan discovery",
+    "Print/output logs",
+    "LoadPlugins exec and Main CLI/__main__ entry"
+  ],
+  "excluded_capabilities": [
+    {
+      "source": "cBinaryFile:118-123",
+      "behavior": "URL urlopen input",
+      "new_behavior": "URL input rejected; local regular files only"
+    },
+    {
+      "source": "cBinaryFile:128-131",
+      "behavior": "ZIP first member with preset password",
+      "new_behavior": "No ZIP dependency in runtime and no archive interpretation"
+    },
+    {
+      "source": "LoadPlugins",
+      "behavior": "Plugin source exec",
+      "new_behavior": "No plugins or runtime source execution"
+    },
+    {
+      "source": "ProcessFile select expression",
+      "behavior": "eval selection",
+      "new_behavior": "No expression selection"
+    },
+    {
+      "source": "UpdateWords/PDFiD disarm/Print",
+      "behavior": "Disarm/output file writes",
+      "new_behavior": "Input read-only; JSON stdout only"
+    }
+  ],
+  "comparison": "New independent bounded contextual byte lexer and dictionary key/value boundaries, rather than running or wrapping the upstream counter. Selected lexical contract only; complete upstream CLI/semantic parity is not claimed.",
+  "excluded_from_audit": [
+    "other DidierStevensSuite modules",
+    "third-party build/CI dependency implementations",
+    "actual PDF viewer/action execution"
+  ],
+  "application_eligibility": "OPEN; provenance and engineering evidence do not establish provider approval"
+}

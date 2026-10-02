@@ -1,0 +1,19 @@
+PDFiD semantic reference module attribution
+
+Author: Didier Stevens
+Module: pdfid.py, PDFiD 0.2.10 (2025/03/05)
+Repository: https://github.com/DidierStevens/DidierStevensSuite
+Commit: b248e9aabac4dedc2619c986d07eb7a5f4c18d37
+Source: https://github.com/DidierStevens/DidierStevensSuite/blob/b248e9aabac4dedc2619c986d07eb7a5f4c18d37/pdfid.py
+Module SHA-256: e958a01f1c2596470f27d3c308061b85d7059ff476a58d74f1957a71b4f1248f
+
+The complete source-module public-domain declaration and warning (lines 12-14):
+
+Source code put in public domain by Didier Stevens, no Copyright
+https://DidierStevens.com
+Use at your own risk
+
+This declaration applies to the selected pdfid.py module only. It is not a
+license declaration for the entire DidierStevensSuite repository. No upstream
+runtime implementation is included in this new independently written project.
+The new implementation has its own MIT license and explicit AI-assisted origin.

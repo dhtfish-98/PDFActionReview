@@ -1,0 +1,123 @@
+{
+  "project": "PDFActionReview",
+  "review_date": "2026-10-02",
+  "all_new_runtime_tests_package_ci_docs_notices_reviewed": true,
+  "reviewed_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "physical_lines": 6,
+      "reviewed_complete": true
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "bb86636430170f7439a7aa2ff8e6655fa1e3c846ca892fe1bf4cf11c75418ecf",
+      "physical_lines": 27,
+      "reviewed_complete": true
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "bc1dd81bdedf555ac3b709e39da33a0a5aa469352562a4a846a492e49e64b4e0",
+      "physical_lines": 23,
+      "reviewed_complete": true
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "0fc59033a1527b15ccbf82dfd463e8836cd93907c93f497cd0f5e23790753689",
+      "physical_lines": 5,
+      "reviewed_complete": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "61035960afcb75ab20a5183c44cb2d71b10ac2ae56a46aa4520c96e5d0d98526",
+      "physical_lines": 107,
+      "reviewed_complete": true
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "e4bf41d842cc3de1cb57ddbce96499bb57218b73f4cfad8db71c7efa1f69fce5",
+      "physical_lines": 42,
+      "reviewed_complete": true
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "925080e603f23d67acf3794b35f6556e41b51d54fd2333377f188ecf81ab00f0",
+      "physical_lines": 26,
+      "reviewed_complete": true
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "93e25e9cfb03f2cb432652981fa6620f201d0b92c9b02263bbe19a69fc32f5d2",
+      "physical_lines": 28,
+      "reviewed_complete": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "2fea0bce9ed9a3fdf4fe379af245d7c7eaff19188e4e57c5c1949f75bc8ef651",
+      "physical_lines": 21,
+      "reviewed_complete": true
+    },
+    {
+      "path": "licenses/PDFiD-PUBLIC-DOMAIN.txt",
+      "sha256": "044a628a423f0b233ab7f03fd535f13dae80a01ee59073d827ab1e078cf2bd5b",
+      "physical_lines": 19,
+      "reviewed_complete": true
+    },
+    {
+      "path": "src/pdf_action_review/__init__.py",
+      "sha256": "d87cac28d68a6ab6f543b23e3177391c2c21c6e0a7136774a0f32fb51ce1ab6c",
+      "physical_lines": 6,
+      "reviewed_complete": true
+    },
+    {
+      "path": "src/pdf_action_review/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "physical_lines": 3,
+      "reviewed_complete": true
+    },
+    {
+      "path": "src/pdf_action_review/cli.py",
+      "sha256": "4f60ae16c57a21f21a4dcd1b74d4f0e1d024c180bd6067f844d02a387f6a0ac9",
+      "physical_lines": 15,
+      "reviewed_complete": true
+    },
+    {
+      "path": "src/pdf_action_review/review.py",
+      "sha256": "8d781fed13dcb5b96abbdef267ea4e02e49b1fff6c11ff051e16499e4b40befe",
+      "physical_lines": 476,
+      "reviewed_complete": true
+    },
+    {
+      "path": "tests/test_review.py",
+      "sha256": "ca04b10fab76b89cc7083a57143cf5fe177852c37f804b54fc2c968fffc87ff3",
+      "physical_lines": 321,
+      "reviewed_complete": true
+    }
+  ],
+  "review_focus": [
+    "Regular-file immutable bounded snapshot, leaf O_NOFOLLOW only; parent components use normal OS resolution",
+    "No URL/network, plugins, expression execution, PDF import/viewing, archive extraction/decompression, process spawn or input/report file writes in runtime",
+    "Context isolation: literal/hex strings and comments; opaque stream payload cannot create document tokens or EOF markers",
+    "Direct stream Length dictionary key/value grammar; indirect/missing/duplicate/invalid lengths stop OPEN",
+    "Encoded names, case-sensitive fixed watchlist, physical slash offsets; raw string/stream spellings are not semantic names",
+    "Header/EOF and limited structure observations never establish xref/object/revision or action semantics",
+    "All resource caps and report reduction retain explicit incomplete/OPEN diagnostics; FAIL only lexical-policy evidence",
+    "Private payload/path/arbitrary-name/raw-exception suppression; hash is identity evidence, not anonymization",
+    "Explicit None default and wrong-type limits TypeError avoids silently accepting false/zero inputs",
+    "Full MIT and selected-module public-domain notices; independent AI-assisted attribution",
+    "Package dependencies are stdlib-only at runtime; pinned build tools and CI source reviewed"
+  ],
+  "findings_resolved": [
+    "Wrong-type false/zero library limits now raise TypeError; targeted regression passes",
+    "Parent path-component symlink behavior described accurately"
+  ],
+  "remaining_limits": [
+    "No complete PDF conformance/object/xref/revision/action parser",
+    "All streams opaque; no filters/decompression/embedded-object interpretation",
+    "Only direct integer stream Length supported; strict raw header profile",
+    "Hex-string and literal-octal values not decoded into names",
+    "No suite-wide upstream rewrite or complete dependency implementation audit",
+    "Hosted CI and PDF viewer behavior were not executed"
+  ],
+  "reviewer": "OpenAI Codex AI-assisted review; independent human contribution and provider acceptance remain OPEN"
+}
