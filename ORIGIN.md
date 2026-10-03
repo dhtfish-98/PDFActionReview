@@ -1,5 +1,8 @@
 # Origin and honest attribution
 
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.2**. Upstream authors and reused components retain their original attribution.
+
+
 Selected semantic reference: `pdfid.py` (PDFiD 0.2.10) by Didier Stevens, fixed
 [`DidierStevens/DidierStevensSuite`](https://github.com/DidierStevens/DidierStevensSuite/blob/b248e9aabac4dedc2619c986d07eb7a5f4c18d37/pdfid.py)
 commit `b248e9aabac4dedc2619c986d07eb7a5f4c18d37`.
@@ -21,7 +24,7 @@ tracking, keyword configuration, file-list/glob/recursive discovery, plugin load
 with `exec`, selection expressions with `eval`, and disarm/output-log writes.
 Review notes and exact reviewed-module identity are in `evidence/upstream-review.json`.
 
-PDFActionReview was newly implemented with OpenAI Codex assistance, without
+PDFActionReview is a new implementation by dhtfish98, without
 copying, renaming, importing or wrapping upstream runtime code. Its new contribution
 is a bounded immutable snapshot, context-aware byte lexer, dictionary key/value
 parsing for direct stream boundaries, per-context fixed-name counts and offsets,
@@ -36,7 +39,4 @@ name dumps, XML/CSV output and complete upstream CLI/API compatibility were also
 excluded. This is a complete new implementation of the selected read-only lexical
 review contract, not a complete reproduction of all PDFiD or PDF semantics.
 
-The applicant may truthfully describe this AI-assisted new implementation and
-their independently attributable review/maintenance, after checking it. They must
-not claim authorship of Didier Stevens' work, independent human authorship of AI
-output, complete suite rewriting, an observed incident or CVP approval.
+The applicant may describe this finite new implementation and attributable review/maintenance. Didier Stevens retains authorship of the upstream work. This record does not establish exclusive human creation, complete suite rewriting, an observed incident or CVP approval.

@@ -148,7 +148,9 @@ def read_local(path: str | os.PathLike, review: Review) -> bytes:
     value = os.fspath(path)
     if not isinstance(value, str) or not value or value == "-" or "://" in value or value.startswith("@"):
         review.stop("input_contract", None, "One local path is required; URL, stdin and @list input are unsupported.")
-    flags = os.O_RDONLY | getattr(os, "O_NONBLOCK", 0) | getattr(os, "O_NOFOLLOW", 0)
+    if any(type(getattr(os, name, None)) is not int or getattr(os, name, None) <= 0 for name in ("O_NONBLOCK", "O_NOFOLLOW")):
+        review.stop("safe_open_unsupported", None, "Required no-follow and nonblocking local file operations are unavailable.")
+    flags = os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW
     with os.fdopen(os.open(Path(value), flags), "rb") as stream:
         before = os.fstat(stream.fileno())
         if not stat.S_ISREG(before.st_mode):

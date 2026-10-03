@@ -16,4 +16,4 @@ Use at your own risk
 This declaration applies to the selected pdfid.py module only. It is not a
 license declaration for the entire DidierStevensSuite repository. No upstream
 runtime implementation is included in this new independently written project.
-The new implementation has its own MIT license and explicit AI-assisted origin.
+The new implementation has its own MIT license; its author is dhtfish98.

@@ -17,56 +17,56 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "e5b8af7e9b70b1cf37d38c0160990d07d0450355927a25b8936853b55c9dfed6",
+      "sha256": "7fa504f318db9a5c502da72b4d8c67f5c27102c54a32498613e7be3b8d9eabc1",
       "physical_lines": 23,
       "reviewed_complete": true
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "0fc59033a1527b15ccbf82dfd463e8836cd93907c93f497cd0f5e23790753689",
-      "physical_lines": 5,
+      "sha256": "201495163e13adce01e224858ae5d97037a843e0e11fbf086fb0f45392ca6f08",
+      "physical_lines": 7,
       "reviewed_complete": true
     },
     {
       "path": "README.md",
-      "sha256": "0259f9134c7c4c44d9d259a9a2095fa4d2b3ed0b3efc6655201744a1fc7c6ceb",
-      "physical_lines": 111,
+      "sha256": "b0364d3276dd997c1b53f4b40f79dc13c1d8500e167bf41121c2b7c5ed2bf681",
+      "physical_lines": 116,
       "reviewed_complete": true
     },
     {
       "path": "ORIGIN.md",
-      "sha256": "e4bf41d842cc3de1cb57ddbce96499bb57218b73f4cfad8db71c7efa1f69fce5",
+      "sha256": "0ed5ced573fda6523e6069de587e3b7793f98744d87ab807e92f45e20ddae0be",
       "physical_lines": 42,
       "reviewed_complete": true
     },
     {
       "path": "DEFENSIVE_SCOPE.md",
-      "sha256": "ad12fa2b387be8af4a70fd09dc4ca4c18222643f14b9e5263537dd4e6368c6af",
+      "sha256": "4873ddba5108c85a84eac57bbfab76ac7ff824b589acca8ba22ae59e0bf7745c",
       "physical_lines": 29,
       "reviewed_complete": true
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "5a4406709cc7657786375eb316f6cc9d4a2afd8e361ef0bc0ac71da5b75fce72",
-      "physical_lines": 36,
+      "sha256": "709766c38f4b0f0e6bafffa63051a60958f875da8b995157c6a0822d7f5e9eca",
+      "physical_lines": 46,
       "reviewed_complete": true
     },
     {
       "path": "LICENSE",
-      "sha256": "2fea0bce9ed9a3fdf4fe379af245d7c7eaff19188e4e57c5c1949f75bc8ef651",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
       "physical_lines": 21,
       "reviewed_complete": true
     },
     {
       "path": "licenses/PDFiD-PUBLIC-DOMAIN.txt",
-      "sha256": "044a628a423f0b233ab7f03fd535f13dae80a01ee59073d827ab1e078cf2bd5b",
+      "sha256": "355caf2eba29605d8eef8bb8563be4252f42373e40a1f989b32af5f3e6529777",
       "physical_lines": 19,
       "reviewed_complete": true
     },
     {
       "path": "src/pdf_action_review/__init__.py",
-      "sha256": "ffcdc0f8a97ae25664d861710f725356ab0e254bf70464ab2ecab77f44a2dee8",
-      "physical_lines": 6,
+      "sha256": "07900e6af2c4e62befee3f87203d90430cc85045f9fd3a53e966342ad8c9d7c1",
+      "physical_lines": 8,
       "reviewed_complete": true
     },
     {
@@ -83,8 +83,8 @@
     },
     {
       "path": "src/pdf_action_review/review.py",
-      "sha256": "0504460b24ad34f01eb56cc38d08696a11c3ee78b9a8b4e472667590f398e71e",
-      "physical_lines": 484,
+      "sha256": "a46b21f6e28cbc11031e22a8e604e62d3a3f876f0c57f741a18d2635ca3a434e",
+      "physical_lines": 486,
       "reviewed_complete": true
     },
     {
@@ -98,6 +98,18 @@
       "sha256": "0cd67cb07ead56f6157bdc942560653981561931cb66ddedd306d55d50dd6553",
       "physical_lines": 21,
       "reviewed_complete": true
+    },
+    {
+      "path": "tests/test_safe_read_capabilities.py",
+      "bytes": 4393,
+      "sha256": "7bd121dc1be8a9911fa62a87b498d7ce3d4b921a1b200f60232ce07317de64b8",
+      "read_scope": "ENTIRE_CURRENT_FILE"
+    },
+    {
+      "path": "ATTRIBUTION_UPDATE.json",
+      "bytes": 833,
+      "sha256": "9c8716b6b9c790c18d89ee6a23de6a4a3572c15dbddbaf62cdc8676407ea0e6d",
+      "read_scope": "ENTIRE_CURRENT_FILE"
     }
   ],
   "review_focus": [
@@ -110,7 +122,7 @@
     "All resource caps and report reduction retain explicit incomplete/OPEN diagnostics; FAIL only lexical-policy evidence",
     "Private payload/path/arbitrary-name/raw-exception suppression; hash is identity evidence, not anonymization",
     "Explicit None default and wrong-type limits TypeError avoids silently accepting false/zero inputs",
-    "Full MIT and selected-module public-domain notices; independent AI-assisted attribution",
+    "Full MIT and selected-module public-domain notices; new implementation author dhtfish98 and retained upstream attribution",
     "Package dependencies are stdlib-only at runtime; pinned build tools and CI source reviewed"
   ],
   "findings_resolved": [
@@ -127,7 +139,13 @@
     "No suite-wide upstream rewrite or complete dependency implementation audit",
     "Hosted CI and PDF viewer behavior were not executed"
   ],
-  "reviewer": "OpenAI Codex AI-assisted review; independent human contribution and provider acceptance remain OPEN",
-  "version": "0.1.1",
-  "reaudit_review_basis": "Prior complete selected-source review retained for unchanged files; final runtime and changed source/test/CLI/docs/metadata inspected in this re-audit. Current package/installed/CI states belong to separately bound external records."
+  "reviewer": "Selected implementation review; independent human contribution and provider acceptance remain OPEN",
+  "version": "0.1.2",
+  "reaudit_review_basis": "Prior complete selected-source review retained for unchanged files; final runtime and changed source/test/CLI/docs/metadata inspected in this re-audit. Current package/installed/CI states belong to separately bound external records.",
+  "current_attribution_version": "0.1.2",
+  "current_implementation_author": "dhtfish98",
+  "current_validation": "ATTRIBUTION_UPDATE.json",
+  "current_functional_revision": "Exact positive-integer secure-reader capability guard; current full inventory in SOURCE_MANIFEST.json.",
+  "current_source_manifest": "SOURCE_MANIFEST.json",
+  "inventory_exclusions": "This review inventory and SOURCE_MANIFEST.json exclude their own/recursive manifest bytes; full current repository file identities are in SOURCE_MANIFEST.json and external batch report."
 }

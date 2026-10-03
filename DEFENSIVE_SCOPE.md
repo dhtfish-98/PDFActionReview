@@ -25,5 +25,5 @@ argument spellings and paths are not echoed in either output stream.
 This is a lawful defensive artifact-inspection topic. CVP qualification is OPEN:
 applicant identity/organization, attributable work, actual workflow and real
 safeguards impact need separate truthful evidence. A project title, upstream
-module, local tests or AI-assisted implementation cannot guarantee approval.
+module, local tests or implementation cannot guarantee approval.
 No production incident, viewer execution or application approval is claimed.

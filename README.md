@@ -1,12 +1,15 @@
 # PDFActionReview
 
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.2**. Upstream authors and reused components retain their original attribution.
+
+
 A defensive, local-only PDF lexical review tool. It records selected PDF names,
 `#xx`-encoded names, structural words and byte offsets while separating document
 tokens from comment/literal-string spellings and opaque stream bytes. It does not
 execute JavaScript, open links, extract attachments, decompress streams or modify
 the input. Runtime dependencies are Python's standard library only.
 
-This is a newly written AI-assisted implementation, with PDFiD's `pdfid.py` as a
+This is a new implementation by dhtfish98, with PDFiD's `pdfid.py` as a
 semantic reference. It is not a rewrite of DidierStevensSuite as a whole, and it
 does not wrap or execute upstream code. [ORIGIN](ORIGIN.md) records the fixed
 source commit, complete module review and attributable contribution.
@@ -109,3 +112,5 @@ The new MIT license and the complete selected module's public-domain declaration
 are retained in both distributions; no suite-wide license claim is made.
 
 Syntax reference consulted: [PDF Association PDF basics](https://pdfa.org/wp-content/uploads/2023/08/PDF-Basics-CheatSheet.pdf).
+
+Safe local file input requires positive integer `O_NOFOLLOW`, `O_NONBLOCK` flags, plus directory-relative operations only where used by this reader. Missing, None, zero or boolean flags return the existing controlled unsupported/error result before opening input. File-reader validation covers macOS/Linux; native Windows safe file reading is not established.

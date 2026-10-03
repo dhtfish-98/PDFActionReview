@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "project": "PDFActionReview",
+  "version": "0.1.2",
+  "implementation_author": "dhtfish98",
+  "self_excluded_to_avoid_recursive_hash": true,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "bb86636430170f7439a7aa2ff8e6655fa1e3c846ca892fe1bf4cf11c75418ecf",
+      "bytes": 908
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "bytes": 60
+    },
+    {
+      "path": "ATTRIBUTION_UPDATE.json",
+      "sha256": "9c8716b6b9c790c18d89ee6a23de6a4a3572c15dbddbaf62cdc8676407ea0e6d",
+      "bytes": 833
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "4873ddba5108c85a84eac57bbfab76ac7ff824b589acca8ba22ae59e0bf7745c",
+      "bytes": 1838
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
+      "bytes": 1066
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "201495163e13adce01e224858ae5d97037a843e0e11fbf086fb0f45392ca6f08",
+      "bytes": 262
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "0ed5ced573fda6523e6069de587e3b7793f98744d87ab807e92f45e20ddae0be",
+      "bytes": 2864
+    },
+    {
+      "path": "README.md",
+      "sha256": "b0364d3276dd997c1b53f4b40f79dc13c1d8500e167bf41121c2b7c5ed2bf681",
+      "bytes": 6898
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "709766c38f4b0f0e6bafffa63051a60958f875da8b995157c6a0822d7f5e9eca",
+      "bytes": 3720
+    },
+    {
+      "path": "evidence/reaudit-0.1.1.json",
+      "sha256": "0cd67cb07ead56f6157bdc942560653981561931cb66ddedd306d55d50dd6553",
+      "bytes": 997
+    },
+    {
+      "path": "evidence/source-review.json",
+      "sha256": "b8f9b155031ed05f43c036443666d6a77c41eb20605486868cf5bd154272fc5e",
+      "bytes": 6820
+    },
+    {
+      "path": "evidence/upstream-review.json",
+      "sha256": "42fac6a4ce7152341bd0fb98396707b4c8a8a33643e18529b01602e5e030c255",
+      "bytes": 2504
+    },
+    {
+      "path": "evidence/validation.json",
+      "sha256": "1329ebbe1691568436c08e94124b319bb9668956be0c0ecc96c8fd5bf5404454",
+      "bytes": 4792
+    },
+    {
+      "path": "licenses/PDFiD-PUBLIC-DOMAIN.txt",
+      "sha256": "355caf2eba29605d8eef8bb8563be4252f42373e40a1f989b32af5f3e6529777",
+      "bytes": 920
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "7fa504f318db9a5c502da72b4d8c67f5c27102c54a32498613e7be3b8d9eabc1",
+      "bytes": 651
+    },
+    {
+      "path": "src/pdf_action_review/__init__.py",
+      "sha256": "07900e6af2c4e62befee3f87203d90430cc85045f9fd3a53e966342ad8c9d7c1",
+      "bytes": 195
+    },
+    {
+      "path": "src/pdf_action_review/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bytes": 48
+    },
+    {
+      "path": "src/pdf_action_review/cli.py",
+      "sha256": "03a2819a756a79666f39f647f85c75a37807d14e20167e692918ae6cb4cf135e",
+      "bytes": 1067
+    },
+    {
+      "path": "src/pdf_action_review/review.py",
+      "sha256": "a46b21f6e28cbc11031e22a8e604e62d3a3f876f0c57f741a18d2635ca3a434e",
+      "bytes": 26033
+    },
+    {
+      "path": "tests/test_review.py",
+      "sha256": "d0ac2f4ca3cc647f0876c7587a9392c46bc861be8470274cbeaa41f31260e466",
+      "bytes": 19434
+    },
+    {
+      "path": "tests/test_safe_read_capabilities.py",
+      "sha256": "7bd121dc1be8a9911fa62a87b498d7ce3d4b921a1b200f60232ce07317de64b8",
+      "bytes": 4393
+    }
+  ]
+}
