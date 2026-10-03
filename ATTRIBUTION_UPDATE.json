@@ -9,5 +9,8 @@
   "functional_change": "Required safe-file flags must be exact positive integers before any open; missing/None/zero/bool refusal preserves the selected reader and CLI contract.",
   "current_source_manifest": "SOURCE_MANIFEST.json",
   "upstream_notices": "Original upstream licenses and notice content retained; PDF public-domain declaration unchanged while the project-owned appended attribution sentence is updated.",
-  "historical_validation": "VALIDATION.md historical section; prior version records retained."
+  "historical_validation": "VALIDATION.md historical section; prior version records retained.",
+  "historical_record": true,
+  "historical_version": "0.1.2",
+  "current_licensing_record": "LICENSE_CLEANUP.json"
 }

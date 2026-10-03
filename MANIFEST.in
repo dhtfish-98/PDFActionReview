@@ -1,7 +1,8 @@
 include .gitignore LICENSE README.md ORIGIN.md DEFENSIVE_SCOPE.md VALIDATION.md
-recursive-include licenses *.txt
 recursive-include tests *.py
 recursive-include .github *.yml
 recursive-include evidence *.json
 
 include SOURCE_MANIFEST.json ATTRIBUTION_UPDATE.json
+
+include LICENSE_CLEANUP.json

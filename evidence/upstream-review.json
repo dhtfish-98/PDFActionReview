@@ -18,7 +18,8 @@
     "scope": "selected pdfid.py module only",
     "declaration_lines": "12-14",
     "declaration": "Source code put in public domain by Didier Stevens, no Copyright\nhttps://DidierStevens.com\nUse at your own risk",
-    "full_notice_retained": "licenses/PDFiD-PUBLIC-DOMAIN.txt"
+    "historical_full_notice_copy": "licenses/PDFiD-PUBLIC-DOMAIN.txt",
+    "current_product_reference_copy_distributed": false
   },
   "reviewed_entry_points": [
     "imports and cBinaryFile",

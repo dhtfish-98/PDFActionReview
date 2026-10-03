@@ -17,14 +17,14 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "7fa504f318db9a5c502da72b4d8c67f5c27102c54a32498613e7be3b8d9eabc1",
+      "sha256": "66a00bb68b32e07e04c2165c47dffb4796c2d7a208691384812dd401cea8fe83",
       "physical_lines": 23,
       "reviewed_complete": true
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "201495163e13adce01e224858ae5d97037a843e0e11fbf086fb0f45392ca6f08",
-      "physical_lines": 7,
+      "sha256": "6e3a05266f4f5c92fde0a406ff6bb9a1deae5480c692ff8b51406149896f1481",
+      "physical_lines": 8,
       "reviewed_complete": true
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "path": "ORIGIN.md",
-      "sha256": "0ed5ced573fda6523e6069de587e3b7793f98744d87ab807e92f45e20ddae0be",
+      "sha256": "71ca17444eceaba5eb8c6454286c54ef4ef53cd26a97ea12faf51e975d3cce4e",
       "physical_lines": 42,
       "reviewed_complete": true
     },
@@ -47,8 +47,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "709766c38f4b0f0e6bafffa63051a60958f875da8b995157c6a0822d7f5e9eca",
-      "physical_lines": 46,
+      "sha256": "e94812c41f96012cea2713ae08d914815afe3d8a620849edc47d6fafbbcce4b4",
+      "physical_lines": 54,
       "reviewed_complete": true
     },
     {
@@ -58,14 +58,8 @@
       "reviewed_complete": true
     },
     {
-      "path": "licenses/PDFiD-PUBLIC-DOMAIN.txt",
-      "sha256": "355caf2eba29605d8eef8bb8563be4252f42373e40a1f989b32af5f3e6529777",
-      "physical_lines": 19,
-      "reviewed_complete": true
-    },
-    {
       "path": "src/pdf_action_review/__init__.py",
-      "sha256": "07900e6af2c4e62befee3f87203d90430cc85045f9fd3a53e966342ad8c9d7c1",
+      "sha256": "04373a32b6d8e3b78fbb0c9d8f1c9c6e75ad3e3cd97613fd4a22b5c21c6d79c2",
       "physical_lines": 8,
       "reviewed_complete": true
     },
@@ -107,8 +101,8 @@
     },
     {
       "path": "ATTRIBUTION_UPDATE.json",
-      "bytes": 833,
-      "sha256": "9c8716b6b9c790c18d89ee6a23de6a4a3572c15dbddbaf62cdc8676407ea0e6d",
+      "bytes": 949,
+      "sha256": "b62421542cd99200b8824c2b6d66c022eba8e2c43725f7f3d89e97a0f2628229",
       "read_scope": "ENTIRE_CURRENT_FILE"
     }
   ],
@@ -122,7 +116,7 @@
     "All resource caps and report reduction retain explicit incomplete/OPEN diagnostics; FAIL only lexical-policy evidence",
     "Private payload/path/arbitrary-name/raw-exception suppression; hash is identity evidence, not anonymization",
     "Explicit None default and wrong-type limits TypeError avoids silently accepting false/zero inputs",
-    "Full MIT and selected-module public-domain notices; new implementation author dhtfish98 and retained upstream attribution",
+    "Own MIT license; module-specific public-domain semantic reference facts retained without an optional declaration-copy file",
     "Package dependencies are stdlib-only at runtime; pinned build tools and CI source reviewed"
   ],
   "findings_resolved": [
@@ -140,12 +134,13 @@
     "Hosted CI and PDF viewer behavior were not executed"
   ],
   "reviewer": "Selected implementation review; independent human contribution and provider acceptance remain OPEN",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "reaudit_review_basis": "Prior complete selected-source review retained for unchanged files; final runtime and changed source/test/CLI/docs/metadata inspected in this re-audit. Current package/installed/CI states belong to separately bound external records.",
-  "current_attribution_version": "0.1.2",
+  "current_attribution_version": "0.1.3",
   "current_implementation_author": "dhtfish98",
-  "current_validation": "ATTRIBUTION_UPDATE.json",
+  "current_validation": "LICENSE_CLEANUP.json",
   "current_functional_revision": "Exact positive-integer secure-reader capability guard; current full inventory in SOURCE_MANIFEST.json.",
   "current_source_manifest": "SOURCE_MANIFEST.json",
-  "inventory_exclusions": "This review inventory and SOURCE_MANIFEST.json exclude their own/recursive manifest bytes; full current repository file identities are in SOURCE_MANIFEST.json and external batch report."
+  "inventory_exclusions": "This review inventory and SOURCE_MANIFEST.json exclude their own/recursive manifest bytes; full current repository file identities are in SOURCE_MANIFEST.json and external batch report.",
+  "current_material_cleanup": "Only actual current files inventoried; source-only original design licenses/notice copies removed. Genuine distributed third-party material remains attributed."
 }

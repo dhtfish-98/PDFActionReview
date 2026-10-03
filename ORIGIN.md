@@ -1,6 +1,6 @@
 # Origin and honest attribution
 
-Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.2**. Upstream authors and reused components retain their original attribution.
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.3**. Upstream authors and reused components retain their original attribution.
 
 
 Selected semantic reference: `pdfid.py` (PDFiD 0.2.10) by Didier Stevens, fixed
@@ -13,10 +13,10 @@ were read and reviewed locally. No other suite module or third-party dependency
 implementation was audited. The suite as a whole has no uniform root license in
 the selection record; its unreviewed tools are not part of this project.
 
-The author places this module in the public domain. Its complete declaration,
-author/site attribution and warning are preserved in
-`licenses/PDFiD-PUBLIC-DOMAIN.txt`. This is a module-specific declaration; it is
-not converted into a suite-wide permission claim.
+The selected module declares public domain at its source lines 12-14. No
+upstream implementation is distributed here, so a separate declaration copy is
+omitted. This remains a module-specific source fact, not a suite-wide permission
+claim. The new implementation is licensed under its own MIT LICENSE.
 
 The upstream source includes ordinary local and URL input in `cBinaryFile`, ZIP
 first-member reading with a preset password, XML/JSON output, entropy/date/EOF
