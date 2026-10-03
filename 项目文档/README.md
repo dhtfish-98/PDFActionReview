@@ -1,6 +1,8 @@
+> 目录已整理：文档在「项目文档」，构建、缓存与暂存输入在「Build」。从仓库根目录运行 `python3 构建.py --build`；如需使用本文原有源码命令，先运行 `python3 构建.py --stage --ci`，再进入 `Build/源码`。暂存会恢复原输入路径。现有版本和历史验证记录按各自提交理解。
+
 # PDFActionReview
 
-Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.2**. Upstream authors and reused components retain their original attribution.
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.3**. Upstream authors and reused components retain their original attribution.
 
 
 A defensive, local-only PDF lexical review tool. It records selected PDF names,
@@ -11,7 +13,7 @@ the input. Runtime dependencies are Python's standard library only.
 
 This is a new implementation by dhtfish98, with PDFiD's `pdfid.py` as a
 semantic reference. It is not a rewrite of DidierStevensSuite as a whole, and it
-does not wrap or execute upstream code. [ORIGIN](ORIGIN.md) records the fixed
+does not wrap or execute upstream code. [ORIGIN](<ORIGIN.md>) records the fixed
 source commit, complete module review and attributable contribution.
 
 ## Run
@@ -106,8 +108,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 python -m build
 ```
 
-[VALIDATION](VALIDATION.md) and `evidence/` record actual source/package/CLI checks.
-[DEFENSIVE_SCOPE](DEFENSIVE_SCOPE.md) describes authorized use and limitations.
+[VALIDATION](<VALIDATION.md>) and `evidence/` record actual source/package/CLI checks.
+[DEFENSIVE_SCOPE](<DEFENSIVE_SCOPE.md>) describes authorized use and limitations.
 The new MIT license and the complete selected module's public-domain declaration
 are retained in both distributions; no suite-wide license claim is made.
 

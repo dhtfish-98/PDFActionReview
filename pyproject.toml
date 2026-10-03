@@ -6,10 +6,10 @@ build-backend = "setuptools.build_meta"
 name = "pdf-action-review"
 version = "0.1.3"
 description = "Bounded read-only contextual PDF name and structural token review"
-readme = "README.md"
+readme = "项目文档/README.md"
 requires-python = ">=3.11"
 license = "MIT"
-license-files = ["LICENSE"]
+license-files = ["项目文档/LICENSE"]
 authors = [{name = "dhtfish98"}]
 dependencies = []
 
@@ -20,4 +20,4 @@ pdf-action-review = "pdf_action_review.cli:main"
 where = ["src"]
 
 [tool.setuptools.data-files]
-"share/pdf-action-review" = ["ORIGIN.md", "DEFENSIVE_SCOPE.md", "VALIDATION.md"]
+"share/pdf-action-review" = ["项目文档/ORIGIN.md", "项目文档/DEFENSIVE_SCOPE.md", "项目文档/VALIDATION.md"]

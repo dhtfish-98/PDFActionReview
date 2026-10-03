@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "project": "PDFActionReview",
+  "version": "0.1.3",
+  "implementation_author": "dhtfish98",
+  "self_excluded_to_avoid_recursive_hash": true,
+  "current_validation": "LICENSE_CLEANUP.json",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "bb86636430170f7439a7aa2ff8e6655fa1e3c846ca892fe1bf4cf11c75418ecf",
+      "bytes": 908
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "bytes": 60
+    },
+    {
+      "path": "ATTRIBUTION_UPDATE.json",
+      "sha256": "b62421542cd99200b8824c2b6d66c022eba8e2c43725f7f3d89e97a0f2628229",
+      "bytes": 949
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "4873ddba5108c85a84eac57bbfab76ac7ff824b589acca8ba22ae59e0bf7745c",
+      "bytes": 1838
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
+      "bytes": 1066
+    },
+    {
+      "path": "LICENSE_CLEANUP.json",
+      "sha256": "782eb0349b24867215132130d7f42b4721111832a295a358750d02acd45bc7cb",
+      "bytes": 778
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "6e3a05266f4f5c92fde0a406ff6bb9a1deae5480c692ff8b51406149896f1481",
+      "bytes": 259
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "71ca17444eceaba5eb8c6454286c54ef4ef53cd26a97ea12faf51e975d3cce4e",
+      "bytes": 2904
+    },
+    {
+      "path": "README.md",
+      "sha256": "b0364d3276dd997c1b53f4b40f79dc13c1d8500e167bf41121c2b7c5ed2bf681",
+      "bytes": 6898
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "e94812c41f96012cea2713ae08d914815afe3d8a620849edc47d6fafbbcce4b4",
+      "bytes": 4819
+    },
+    {
+      "path": "evidence/reaudit-0.1.1.json",
+      "sha256": "0cd67cb07ead56f6157bdc942560653981561931cb66ddedd306d55d50dd6553",
+      "bytes": 997
+    },
+    {
+      "path": "evidence/source-review.json",
+      "sha256": "e1b5adf86ebd1bfcf49c5bba9f526795dbdcb5228c5aeca8254dce950e36701a",
+      "bytes": 6804
+    },
+    {
+      "path": "evidence/upstream-review.json",
+      "sha256": "67f2326528fba19200a3a8f88a4e05339c5a527d439a713c9c23bf6b6705714a",
+      "bytes": 2568
+    },
+    {
+      "path": "evidence/validation.json",
+      "sha256": "1329ebbe1691568436c08e94124b319bb9668956be0c0ecc96c8fd5bf5404454",
+      "bytes": 4792
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "66a00bb68b32e07e04c2165c47dffb4796c2d7a208691384812dd401cea8fe83",
+      "bytes": 615
+    },
+    {
+      "path": "src/pdf_action_review/__init__.py",
+      "sha256": "04373a32b6d8e3b78fbb0c9d8f1c9c6e75ad3e3cd97613fd4a22b5c21c6d79c2",
+      "bytes": 195
+    },
+    {
+      "path": "src/pdf_action_review/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "bytes": 48
+    },
+    {
+      "path": "src/pdf_action_review/cli.py",
+      "sha256": "03a2819a756a79666f39f647f85c75a37807d14e20167e692918ae6cb4cf135e",
+      "bytes": 1067
+    },
+    {
+      "path": "src/pdf_action_review/review.py",
+      "sha256": "a46b21f6e28cbc11031e22a8e604e62d3a3f876f0c57f741a18d2635ca3a434e",
+      "bytes": 26033
+    },
+    {
+      "path": "tests/test_review.py",
+      "sha256": "d0ac2f4ca3cc647f0876c7587a9392c46bc861be8470274cbeaa41f31260e466",
+      "bytes": 19434
+    },
+    {
+      "path": "tests/test_safe_read_capabilities.py",
+      "sha256": "7bd121dc1be8a9911fa62a87b498d7ce3d4b921a1b200f60232ce07317de64b8",
+      "bytes": 4393
+    }
+  ]
+}
