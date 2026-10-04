@@ -17,32 +17,32 @@
       "bytes": 174
     },
     {
-      "path": "ATTRIBUTION_UPDATE.json",
+      "path": "项目文档/ATTRIBUTION_UPDATE.json",
       "sha256": "b62421542cd99200b8824c2b6d66c022eba8e2c43725f7f3d89e97a0f2628229",
       "bytes": 949
     },
     {
       "path": "MANIFEST.in",
-      "sha256": "e1756ca4c884c0cac89f26e4c87c5ad1cde4b626ce8c86ad1a15ff2849138c3f",
-      "bytes": 834
+      "sha256": "69608ba82fed86ef1c2221d3fc7173ee030e51306fd33895aa460179441445f2",
+      "bytes": 860
     },
     {
-      "path": "evidence/reaudit-0.1.1.json",
+      "path": "项目文档/evidence/reaudit-0.1.1.json",
       "sha256": "0cd67cb07ead56f6157bdc942560653981561931cb66ddedd306d55d50dd6553",
       "bytes": 997
     },
     {
-      "path": "evidence/source-review.json",
+      "path": "项目文档/evidence/source-review.json",
       "sha256": "e1b5adf86ebd1bfcf49c5bba9f526795dbdcb5228c5aeca8254dce950e36701a",
       "bytes": 6804
     },
     {
-      "path": "evidence/upstream-review.json",
+      "path": "项目文档/evidence/upstream-review.json",
       "sha256": "67f2326528fba19200a3a8f88a4e05339c5a527d439a713c9c23bf6b6705714a",
       "bytes": 2568
     },
     {
-      "path": "evidence/validation.json",
+      "path": "项目文档/evidence/validation.json",
       "sha256": "1329ebbe1691568436c08e94124b319bb9668956be0c0ecc96c8fd5bf5404454",
       "bytes": 4792
     },
