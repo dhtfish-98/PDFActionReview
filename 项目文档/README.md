@@ -2,7 +2,7 @@
 
 # PDFActionReview
 
-Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.4**. Upstream authors and reused components retain their original attribution.
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.5**. Upstream authors and reused components retain their original attribution.
 
 
 A defensive, local-only PDF lexical review tool. It records selected PDF names,

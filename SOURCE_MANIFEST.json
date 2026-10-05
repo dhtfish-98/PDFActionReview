@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "project": "PDFActionReview",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "implementation_author": "dhtfish98",
   "self_excluded_to_avoid_recursive_hash": true,
   "current_validation": "项目文档/LICENSE_CLEANUP.json",
@@ -48,12 +48,12 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "5947c7031bbbf159544e3daaaf92174b743dddb3555ec752e45599535eedfc93",
+      "sha256": "069bea69d86daa9690b208e0d3e6beab6ca0fc9accc2a282dd624adf7bf3ee6f",
       "bytes": 680
     },
     {
       "path": "src/pdf_action_review/__init__.py",
-      "sha256": "974afbbc193f5ecccd6891c57c99c8e029b7909323e0ba772da11991326c3fdf",
+      "sha256": "6b08416e53125d5d20d8e8b137cb14005c21c11ee8d4259665c6bc7cdf3de5fe",
       "bytes": 195
     },
     {
@@ -87,7 +87,7 @@
       "path": "构建.py"
     },
     {
-      "sha256": "6737609797878f47a476f7b656714d83fe48f935c8581883f5392928642cc6d7",
+      "sha256": "682c67f6d60e605e8b570ed1482d67561d859e91883160c165e34fa314438f82",
       "bytes": 1298,
       "path": "构建配置.json"
     },
@@ -108,17 +108,17 @@
     },
     {
       "path": "项目文档/ORIGIN.md",
-      "sha256": "71ca17444eceaba5eb8c6454286c54ef4ef53cd26a97ea12faf51e975d3cce4e",
+      "sha256": "d1800c2d1aadb13503fdc990a11d4108d5ac177f2887a68f98b37270dfa31a43",
       "bytes": 2904
     },
     {
       "path": "项目文档/README.md",
-      "sha256": "3797d6fdbe8fe3fdd1ca684d41b22f2b69d71186ca036d4fe5b5f2ab5b0fca92",
+      "sha256": "7f0e91f68cd6bb298c9d9a7b4f39757440352dfa453d50fb3e35f6d424fee821",
       "bytes": 7259
     },
     {
       "path": "项目文档/VALIDATION.md",
-      "sha256": "e38578155d044b159370ee43a4837030f45a5e3d9591406f71bcfcf597e6c2f3",
+      "sha256": "22fad097ce233721958017691d010c329a00754dd0b468790ab6f35135ecdba5",
       "bytes": 4957
     },
     {

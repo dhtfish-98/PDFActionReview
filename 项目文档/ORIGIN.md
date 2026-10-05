@@ -1,6 +1,6 @@
 # Origin and honest attribution
 
-Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.3**. Upstream authors and reused components retain their original attribution.
+Current implementation author and maintainer: **dhtfish98**. Current package version: **0.1.5**. Upstream authors and reused components retain their original attribution.
 
 
 Selected semantic reference: `pdfid.py` (PDFiD 0.2.10) by Didier Stevens, fixed
